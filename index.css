@@ -9,6 +9,12 @@
   --bgpurple: #7777bb;
   --bgblue: #7799bb;
   --shadow: 4px 4px 4px rgba(0,0,0,0.5);
+  --gradient: linear-gradient(
+    130deg,
+    var(--pink) 0%,
+    var(--yellow) 50%,
+    var(--green) 90%
+  );
 }
 
 *,
