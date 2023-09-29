@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Lobster+Two&display=swap');
+
+:root {
+  --pink: #ff99cc;
+  --yellow: #ffffcc;
+  --green: #ccffff;
+  --blue: #99ccff;
+  --purple: #9999cc;
+  --bgpurple: #7777bb;
+  --bgblue: #7799bb;
+  --shadow: 4px 4px 4px rgba(0,0,0,0.5);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-image:
+    url("https://www.transparenttextures.com/patterns/asfalt-light.png"),
+    radial-gradient(
+      circle at center,
+      var(--bgblue),
+      var(--bgpurple)
+    );
+  font-family: "Hepta Slab", serif;
+}
