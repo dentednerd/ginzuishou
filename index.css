@@ -6,8 +6,12 @@
   --green: #ccffff;
   --blue: #99ccff;
   --purple: #9999cc;
-  --bgpurple: #7777bb;
-  --bgblue: #7799bb;
+  --bg-pink: #ffeeee;
+  --bg-yellow: #ffffee;
+  --bg-green: #eeffff;
+  --bg-blue: #eeffff;
+  --bg-purple: #eeeeff;
+  --text: #333366;
   --shadow: 4px 4px 4px rgba(0,0,0,0.5);
   --gradient: linear-gradient(
     130deg,
@@ -32,11 +36,15 @@ body {
   place-items: center;
   height: 100vh;
   background-image:
-    url("https://www.transparenttextures.com/patterns/asfalt-light.png"),
-    radial-gradient(
-      circle at center,
-      var(--bgblue),
-      var(--bgpurple)
+    url("https://www.transparenttextures.com/patterns/cream-paper.png"),
+    linear-gradient(
+      to bottom right,
+      var(--bg-pink),
+      var(--bg-yellow),
+      var(--bg-green),
+      var(--bg-blue),
+      var(--bg-purple)
     );
   font-family: "Hepta Slab", serif;
+  color: var(--text);
 }
