@@ -1,36 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
-  --pink: #ff99cc;
-  --orange: #ffcccc;
-  --yellow: #ffffcc;
-  --green: #ccffff;
-  --blue: #99ccff;
-  --purple: #9999cc;
-  --bg-pink: #ffeeee;
-  --bg-yellow: #ffffee;
-  --bg-green: #eeffff;
-  --bg-blue: #eeffff;
-  --bg-purple: #eeeeff;
-  --text: #333366;
-  --link: #0066cc;
-  --shadow: 4px 4px 4px rgba(0,0,0,0.5);
-  --gradient-bg: linear-gradient(
-      130deg,
-      var(--orange),
-      var(--yellow)
-    );
-  --gradient: linear-gradient(
-    130deg,
-    var(--pink) 0%,
-    var(--yellow) 50%,
-    var(--green) 90%
-  );
-  --gradient-dark: linear-gradient(
-    130deg,
-    var(--blue),
-    var(--purple)
-  )
+  --pink-100: hsl(330, 100%, 10%);
+  --pink-200: hsl(330, 100%, 20%);
+  --pink-300: hsl(330, 100%, 30%);
+  --pink-400: hsl(330, 100%, 40%);
+  --pink-500: hsl(330, 100%, 50%);
+  --pink-600: hsl(330, 100%, 60%);
+  --pink-700: hsl(330, 100%, 70%);
+  --pink-800: hsl(330, 100%, 80%);
+  --pink-900: hsl(330, 100%, 90%);
+  --pink-950: hsl(330, 100%, 95%);
+
+  --red-100: hsl(0, 100%, 10%);
+  --red-200: hsl(0, 100%, 20%);
+  --red-300: hsl(0, 100%, 30%);
+  --red-400: hsl(0, 100%, 40%);
+  --red-500: hsl(0, 100%, 50%);
+  --red-600: hsl(0, 100%, 60%);
+  --red-700: hsl(0, 100%, 70%);
+  --red-800: hsl(0, 100%, 80%);
+  --red-900: hsl(0, 100%, 90%);
+  --red-950: hsl(0, 100%, 95%);
+
+  --yellow-100: hsl(60, 100%, 10%);
+  --yellow-200: hsl(60, 100%, 20%);
+  --yellow-300: hsl(60, 100%, 30%);
+  --yellow-400: hsl(60, 100%, 40%);
+  --yellow-500: hsl(60, 100%, 50%);
+  --yellow-600: hsl(60, 100%, 60%);
+  --yellow-700: hsl(60, 100%, 70%);
+  --yellow-800: hsl(60, 100%, 80%);
+  --yellow-900: hsl(60, 100%, 90%);
+  --yellow-950: hsl(60, 100%, 95%);
+
+  --cyan-100: hsl(180, 100%, 10%);
+  --cyan-200: hsl(180, 100%, 20%);
+  --cyan-300: hsl(180, 100%, 30%);
+  --cyan-400: hsl(180, 100%, 40%);
+  --cyan-500: hsl(180, 100%, 50%);
+  --cyan-600: hsl(180, 100%, 60%);
+  --cyan-700: hsl(180, 100%, 70%);
+  --cyan-800: hsl(180, 100%, 80%);
+  --cyan-900: hsl(180, 100%, 90%);
+  --cyan-950: hsl(180, 100%, 95%);
+
+  --blue-100: hsl(210, 100%, 10%);
+  --blue-200: hsl(210, 100%, 20%);
+  --blue-300: hsl(210, 100%, 30%);
+  --blue-400: hsl(210, 100%, 40%);
+  --blue-500: hsl(210, 100%, 50%);
+  --blue-600: hsl(210, 100%, 60%);
+  --blue-700: hsl(210, 100%, 70%);
+  --blue-800: hsl(210, 100%, 80%);
+  --blue-900: hsl(210, 100%, 90%);
+  --blue-950: hsl(210, 100%, 95%);
+
+  --purple-100: hsl(240, 33%, 10%);
+  --purple-200: hsl(240, 33%, 20%);
+  --purple-300: hsl(240, 33%, 30%);
+  --purple-400: hsl(240, 33%, 40%);
+  --purple-500: hsl(240, 33%, 50%);
+  --purple-600: hsl(240, 33%, 60%);
+  --purple-700: hsl(240, 33%, 70%);
+  --purple-800: hsl(240, 33%, 80%);
+  --purple-900: hsl(240, 33%, 90%);
+  --purple-950: hsl(240, 33%, 95%);
+
+  --pink: var(--pink-800);
+  --red: var(--red-900);
+  --yellow: var(--yellow-900);
+  --cyan: var(--cyan-800);
+  --blue: var(--blue-800);
+  --purple: var(--purple-700);
+
+  --text: var(--purple-300);
+  --link: var(--blue-400);
+  --shadow: 4px 4px 4px color-mix(in hsl, var(--purple-100), transparent 50%);
+  --shadow-hover: 2px 2px 2px color-mix(in hsl, var(--purple-100), transparent 50%);
+
+  --rainbow: linear-gradient(to bottom right,
+      var(--pink-950),
+      var(--yellow-950),
+      var(--cyan-950),
+      var(--blue-950),
+      var(--purple-950));
+
+  --gradient: linear-gradient(to bottom right,
+      var(--red-900),
+      var(--yellow-900));
+
+  --gradient-dark: linear-gradient(to bottom right,
+      var(--blue-800),
+      var(--purple-700));
+
+  color-scheme: light dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 *,
@@ -45,11 +117,61 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
-  background-image: var(--gradient-bg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: "Hepta Slab", serif;
-  font-size: 10vmin;
+  padding: 1rem;
+  font-family: "Cabin", sans-serif;
+  font-size: 1rem;
   line-height: normal;
   color: var(--text);
+  background-color: light-dark(white, var(--blue));
+  background-image: linear-gradient(to left, var(--purple), transparent);
+  background-attachment: fixed;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Philosopher", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Cabin", sans-serif;
+  font-size: 1rem;
+  line-height: normal;
+  color: var(--text);
+}
+
+button:hover {
+  box-shadow: var(--shadow-hover);
+  transition: all 0.2s ease;
+}
+
+button.light-gradient {
+  background: var(--gradient);
+}
+
+button.dark-gradient {
+  background: var(--gradient-dark);
+  color: white;
 }
