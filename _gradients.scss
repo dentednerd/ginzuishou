@@ -1,0 +1,22 @@
+@use './colors';
+
+$rainbow: linear-gradient(130deg,
+  colors.$pink-900,
+  colors.$yellow-900,
+  colors.$cyan-900,
+  colors.$blue-900,
+  colors.$purple-900);
+
+$sunrise: linear-gradient(130deg,
+  colors.$red-900,
+  colors.$yellow-900);
+
+$gradient-dark: linear-gradient(130deg,
+  colors.$blue-800,
+  colors.$purple-700);
+
+$twilight: linear-gradient(130deg,
+  colors.$blue-800,
+  colors.$purple-700,
+  colors.$purple-700,
+  colors.$blue-800);

@@ -1,0 +1,115 @@
+@use 'sass:color';
+
+@use './colors';
+@use './fonts';
+@use './gradients';
+@use './shadows';
+
+label {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+input:not([type=file], [type=range]),
+input[type=file]::file-selector-button,
+textarea,
+select,
+datalist {
+  border: 0;
+  color: colors.$purple-300;
+  background-color: colors.$purple-900;
+  padding: 0.5rem 1rem;
+  font-family: fonts.$body;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+
+  &[type=radio],
+  &[type=checkbox] {
+    accent-color: light-dark(colors.$purple-300, white);
+    border: solid 1px colors.$purple-300;
+    background-color: white;
+  }
+
+  &::placeholder {
+    color: colors.$purple-600;
+  }
+}
+
+input[type=text],
+input[type=date],
+input[type=datetime-local],
+textarea,
+input[list] {
+  @include shadows.inset(colors.$purple-600);
+
+  &:disabled {
+    box-shadow: none;
+    background-color: color.mix(colors.$purple-900, transparent, $weight: 50%);
+
+    &::placeholder {
+      color: light-dark(colors.$purple-700, white);
+    }
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    color-scheme: dark;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2px;
+    filter: invert(0.8);
+  }
+}
+
+input[type=color] {
+  all: unset;
+  width: 7.5rem;
+  height: 2rem;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+input[type=file] {
+  font-family: fonts.$body;
+}
+
+input[type=file]::file-selector-button {
+  @include shadows.bevel(colors.$purple-900);
+  margin-inline-end: 1rem;
+}
+
+select {
+  @include shadows.bevel(colors.$purple-900);
+  cursor: pointer;
+  appearance: none;
+  /* Disable the default arrow */
+  -webkit-appearance: none;
+  /* For WebKit-based browsers */
+  -moz-appearance: none;
+      /* For Firefox */
+
+  background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+input[type=text],
+input[type=date],
+input[type=datetime-local],
+input[list],
+select {
+  width: 20ch;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  // width: 100%;
+  cursor: pointer;
+  background: transparent;
+  // background-image: gradients.$rainbow;
+  border-color: transparent;
+  color: transparent;
+}

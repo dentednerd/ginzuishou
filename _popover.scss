@@ -1,0 +1,52 @@
+@use './colors';
+@use './shadows';
+
+div:is([popover]) {
+  position: relative;
+
+  &:popover-open {
+    width: 30vw;
+    height: fit-content;
+    position: fixed;
+    inset: unset;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 1lh 2lh 1lh 1lh;
+    border: none;
+    border-radius: 1lh;
+    overflow: auto;
+
+    p {
+      margin-bottom: 1lh;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    button.close-button {
+      @include shadows.bevel(colors.$purple-900);
+      background-color: colors.$purple-900;
+      position: fixed;
+      right: 0.5rem;
+      top: 0.5rem;
+      height: 2lh;
+      width: 2lh;
+      font-size: 1rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  &::backdrop {
+    background: color-mix(in hsl, colors.$body-grid-bg, transparent 50%);
+    backdrop-filter: blur(3px);
+    pointer-events: none;
+  }
+}

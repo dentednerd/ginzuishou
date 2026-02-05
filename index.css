@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 :root {
   --pink-100: hsl(330, 100%, 10%);
   --pink-200: hsl(330, 100%, 20%);
@@ -11,7 +10,6 @@
   --pink-800: hsl(330, 100%, 80%);
   --pink-900: hsl(330, 100%, 90%);
   --pink-950: hsl(330, 100%, 95%);
-
   --red-100: hsl(0, 100%, 10%);
   --red-200: hsl(0, 100%, 20%);
   --red-300: hsl(0, 100%, 30%);
@@ -22,7 +20,6 @@
   --red-800: hsl(0, 100%, 80%);
   --red-900: hsl(0, 100%, 90%);
   --red-950: hsl(0, 100%, 95%);
-
   --yellow-100: hsl(60, 100%, 10%);
   --yellow-200: hsl(60, 100%, 20%);
   --yellow-300: hsl(60, 100%, 30%);
@@ -33,7 +30,6 @@
   --yellow-800: hsl(60, 100%, 80%);
   --yellow-900: hsl(60, 100%, 90%);
   --yellow-950: hsl(60, 100%, 95%);
-
   --cyan-100: hsl(180, 100%, 10%);
   --cyan-200: hsl(180, 100%, 20%);
   --cyan-300: hsl(180, 100%, 30%);
@@ -44,7 +40,6 @@
   --cyan-800: hsl(180, 100%, 80%);
   --cyan-900: hsl(180, 100%, 90%);
   --cyan-950: hsl(180, 100%, 95%);
-
   --blue-100: hsl(210, 100%, 10%);
   --blue-200: hsl(210, 100%, 20%);
   --blue-300: hsl(210, 100%, 30%);
@@ -55,7 +50,6 @@
   --blue-800: hsl(210, 100%, 80%);
   --blue-900: hsl(210, 100%, 90%);
   --blue-950: hsl(210, 100%, 95%);
-
   --purple-100: hsl(240, 33%, 10%);
   --purple-200: hsl(240, 33%, 20%);
   --purple-300: hsl(240, 33%, 30%);
@@ -66,42 +60,34 @@
   --purple-800: hsl(240, 33%, 80%);
   --purple-900: hsl(240, 33%, 90%);
   --purple-950: hsl(240, 33%, 95%);
-
-  --pink: var(--pink-800);
-  --red: var(--red-900);
-  --yellow: var(--yellow-900);
-  --cyan: var(--cyan-800);
-  --blue: var(--blue-800);
-  --purple: var(--purple-700);
-
-  --text: var(--purple-300);
-  --link: var(--blue-400);
-  --shadow: 4px 4px 4px color-mix(in hsl, var(--purple-100), transparent 50%);
-  --shadow-hover: 2px 2px 2px color-mix(in hsl, var(--purple-100), transparent 50%);
-
-  --rainbow: linear-gradient(to bottom right,
-      var(--pink-950),
-      var(--yellow-950),
-      var(--cyan-950),
-      var(--blue-950),
-      var(--purple-950));
-
-  --gradient: linear-gradient(to bottom right,
-      var(--red-900),
-      var(--yellow-900));
-
-  --gradient-dark: linear-gradient(to bottom right,
-      var(--blue-800),
-      var(--purple-700));
-
+  --pink: hsl(330, 100%, 80%);
+  --red: hsl(0, 100%, 90%);
+  --yellow: hsl(60, 100%, 90%);
+  --cyan: hsl(180, 100%, 80%);
+  --blue: hsl(210, 100%, 80%);
+  --purple: hsl(240, 33%, 70%);
+  --success: hsl(180, 100%, 80%);
+  --info: hsl(210, 100%, 90%);
+  --error: hsl(330, 100%, 80%);
+  --warning: hsl(60, 100%, 90%);
+  --text: light-dark(hsl(240, 33%, 30%), white);
+  --link: hsl(210, 100%, 40%);
+  --body-grid-bg: light-dark(hsl(240, 33%, 95%), hsl(240, 33%, 30%));
+  --body: Cabin, sans-serif;
+  --heading: Philosopher, sans-serif;
+  --code: Source Code Pro, monospace;
+  --gradient-rainbow: linear-gradient(130deg, hsl(330, 100%, 90%), hsl(60, 100%, 90%), hsl(180, 100%, 90%), hsl(210, 100%, 90%), hsl(240, 33%, 90%));
+  --gradient-twilight: linear-gradient(130deg, hsl(210, 100%, 80%), hsl(240, 33%, 70%), hsl(240, 33%, 70%), hsl(210, 100%, 80%));
+  --gradient-sunrise: linear-gradient(130deg, hsl(0, 100%, 90%), hsl(60, 100%, 90%));
+  --gradient-dark: linear-gradient(130deg, hsl(210, 100%, 80%), hsl(240, 33%, 70%));
   color-scheme: light dark;
 }
 
-[data-theme="light"] {
+[data-theme=light] {
   color-scheme: light;
 }
 
-[data-theme="dark"] {
+[data-theme=dark] {
   color-scheme: dark;
 }
 
@@ -114,23 +100,68 @@
 }
 
 body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  padding: 1rem;
   font-family: "Cabin", sans-serif;
   font-size: 1rem;
   line-height: normal;
-  color: var(--text);
-  background-color: light-dark(white, var(--blue));
-  background-image: linear-gradient(to left, var(--purple), transparent);
+  color: light-dark(hsl(240, 33%, 30%), white);
+  background-color: light-dark(hsl(240, 33%, 95%), hsl(240, 33%, 30%));
+  background-image: linear-gradient(to right, hsl(240, 33%, 90%) 1px, transparent 1px), linear-gradient(to bottom, hsl(240, 33%, 90%) 1px, transparent 1px);
+  background-size: 2rem 2rem;
   background-attachment: fixed;
 }
 
-code {
-  font-family: "Source Code Pro", monospace;
-  font-size: 1rem;
-  font-weight: 400;
+body[data-theme=dark] {
+  background-image: linear-gradient(to right, hsl(240, 33%, 40%) 1px, transparent 1px), linear-gradient(to bottom, hsl(240, 33%, 40%) 1px, transparent 1px);
+}
+
+button[data-theme-toggle] {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  aspect-ratio: 1;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+button[data-theme-toggle] .sun {
+  fill: hsl(240, 33%, 30%);
+}
+button[data-theme-toggle] .moon {
+  fill: transparent;
+}
+
+body[data-theme=dark] button[data-theme-toggle] .sun {
+  fill: transparent;
+}
+body[data-theme=dark] button[data-theme-toggle] .moon {
+  fill: hsl(240, 33%, 30%);
+}
+
+*:focus {
+  outline: solid 2px light-dark(hsl(240, 33%, 30%), white);
+}
+
+.shadow-drop {
+  box-shadow: 0.25rem 0.25rem 0.5rem light-dark(hsl(240, 33%, 30%), white);
+}
+
+.shadow-inset {
+  box-shadow: inset 1px 1px 0.25rem hsl(240, 33%, 30%);
+  transition: box-shadow 0.2s ease;
+}
+.shadow-inset:hover {
+  box-shadow: inset 4px 4px 4px hsl(240, 33%, 30%);
+  transition: box-shadow 0.2s ease;
+}
+
+.shadow-bevel {
+  box-shadow: inset -1px -1px 0.25rem rgb(63.8775, 63.8775, 89.1225), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(63.8775, 63.8775, 89.1225);
+  transition: box-shadow 0.2s ease;
+}
+.shadow-bevel:hover {
+  box-shadow: inset 4px 4px 4px rgb(63.8775, 63.8775, 89.1225);
+  transition: box-shadow 0.2s ease;
 }
 
 h1,
@@ -142,36 +173,428 @@ h6 {
   font-family: "Philosopher", sans-serif;
   font-weight: 700;
   font-style: normal;
+  margin-block-end: 1rem;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+p,
+a,
+li {
+  font-family: "Cabin", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.2;
 }
 
+p {
+  margin-block-end: 1lh;
+}
+p:last-of-type {
+  margin-block-end: 0;
+}
+
+a {
+  color: hsl(210, 100%, 50%);
+}
+a:visited {
+  color: light-dark(hsl(240, 33%, 50%), hsl(240, 33%, 80%));
+}
+
+ul, ol {
+  width: calc(100% - 2rem);
+  margin: 1rem;
+}
+
+li {
+  margin-block-end: 0.5lh;
+}
+li:last-of-type {
+  margin-block-end: 0;
+}
+
+blockquote {
+  margin: 1rem;
+  padding-inline: 1rem;
+  border-left: solid 1px light-dark(hsl(240, 33%, 30%), white);
+  color: light-dark(hsl(240, 33%, 50%), hsl(240, 33%, 90%));
+}
+
+div:is([popover]) {
+  position: relative;
+}
+div:is([popover]):popover-open {
+  width: 30vw;
+  height: fit-content;
+  position: fixed;
+  inset: unset;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 1lh 2lh 1lh 1lh;
+  border: none;
+  border-radius: 1lh;
+  overflow: auto;
+}
+div:is([popover]):popover-open p {
+  margin-bottom: 1lh;
+}
+div:is([popover]):popover-open p:last-of-type {
+  margin-bottom: 0;
+}
+div:is([popover]):popover-open button.close-button {
+  box-shadow: inset -1px -1px 0.25rem rgb(119.34, 119.34, 186.66), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(119.34, 119.34, 186.66);
+  transition: box-shadow 0.2s ease;
+}
+div:is([popover]):popover-open button.close-button:hover {
+  box-shadow: inset 4px 4px 4px rgb(119.34, 119.34, 186.66);
+  transition: box-shadow 0.2s ease;
+}
+div:is([popover]):popover-open button.close-button {
+  background-color: hsl(240, 33%, 90%);
+  position: fixed;
+  right: 0.5rem;
+  top: 0.5rem;
+  height: 2lh;
+  width: 2lh;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+div:is([popover])::backdrop {
+  background: color-mix(in hsl, light-dark(hsl(240, 33%, 95%), hsl(240, 33%, 30%)), transparent 50%);
+  backdrop-filter: blur(3px);
+  pointer-events: none;
+}
+
 button {
+  box-shadow: inset -1px -1px 0.25rem rgb(119.34, 119.34, 186.66), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(119.34, 119.34, 186.66);
+  transition: box-shadow 0.2s ease;
+}
+button:hover {
+  box-shadow: inset 4px 4px 4px rgb(119.34, 119.34, 186.66);
+  transition: box-shadow 0.2s ease;
+}
+button {
+  background-color: hsl(240, 33%, 90%);
+  color: hsl(240, 33%, 30%);
   padding: 1rem;
   border: none;
   border-radius: 0.5rem;
-  box-shadow: var(--shadow);
-  cursor: pointer;
-  transition: all 0.2s ease;
   font-family: "Cabin", sans-serif;
   font-size: 1rem;
   line-height: normal;
-  color: var(--text);
+  cursor: pointer;
+}
+button.success {
+  box-shadow: inset -1px -1px 0.25rem rgb(51.1275, 204.1275, 229.3725), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(51.1275, 204.1275, 229.3725);
+  transition: box-shadow 0.2s ease;
+}
+button.success:hover {
+  box-shadow: inset 4px 4px 4px rgb(51.1275, 204.1275, 229.3725);
+  transition: box-shadow 0.2s ease;
+}
+button.info {
+  box-shadow: inset -1px -1px 0.25rem rgb(85.17, 136.17, 220.83), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(85.17, 136.17, 220.83);
+  transition: box-shadow 0.2s ease;
+}
+button.info:hover {
+  box-shadow: inset 4px 4px 4px rgb(85.17, 136.17, 220.83);
+  transition: box-shadow 0.2s ease;
+}
+button.error {
+  box-shadow: inset -1px -1px 0.25rem rgb(207.4884459459, 64.5965540541, 159.6196621622), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(207.4884459459, 64.5965540541, 159.6196621622);
+  transition: box-shadow 0.2s ease;
+}
+button.error:hover {
+  box-shadow: inset 4px 4px 4px rgb(207.4884459459, 64.5965540541, 159.6196621622);
+  transition: box-shadow 0.2s ease;
+}
+button.warning {
+  box-shadow: inset -1px -1px 0.25rem rgb(187.17, 187.17, 118.83), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(187.17, 187.17, 118.83);
+  transition: box-shadow 0.2s ease;
+}
+button.warning:hover {
+  box-shadow: inset 4px 4px 4px rgb(187.17, 187.17, 118.83);
+  transition: box-shadow 0.2s ease;
+}
+button:disabled {
+  color: hsl(240, 33%, 70%);
+  box-shadow: unset;
+  cursor: auto;
 }
 
-button:hover {
-  box-shadow: var(--shadow-hover);
-  transition: all 0.2s ease;
+label {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  align-items: center;
 }
 
-button.light-gradient {
-  background: var(--gradient);
+input:not([type=file], [type=range]),
+input[type=file]::file-selector-button,
+textarea,
+select,
+datalist {
+  border: 0;
+  color: hsl(240, 33%, 30%);
+  background-color: hsl(240, 33%, 90%);
+  padding: 0.5rem 1rem;
+  font-family: "Cabin", sans-serif;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+input:not([type=file], [type=range])[type=radio], input:not([type=file], [type=range])[type=checkbox],
+input[type=file]::file-selector-button[type=radio],
+input[type=file]::file-selector-button[type=checkbox],
+textarea[type=radio],
+textarea[type=checkbox],
+select[type=radio],
+select[type=checkbox],
+datalist[type=radio],
+datalist[type=checkbox] {
+  accent-color: light-dark(hsl(240, 33%, 30%), white);
+  border: solid 1px hsl(240, 33%, 30%);
+  background-color: white;
+}
+input:not([type=file], [type=range])::placeholder,
+input[type=file]::file-selector-button::placeholder,
+textarea::placeholder,
+select::placeholder,
+datalist::placeholder {
+  color: hsl(240, 33%, 60%);
 }
 
-button.dark-gradient {
-  background: var(--gradient-dark);
+input[type=text],
+input[type=date],
+input[type=datetime-local],
+textarea,
+input[list] {
+  box-shadow: inset 1px 1px 0.25rem hsl(240, 33%, 60%);
+  transition: box-shadow 0.2s ease;
+}
+input[type=text]:hover,
+input[type=date]:hover,
+input[type=datetime-local]:hover,
+textarea:hover,
+input[list]:hover {
+  box-shadow: inset 4px 4px 4px hsl(240, 33%, 60%);
+  transition: box-shadow 0.2s ease;
+}
+input[type=text]:disabled,
+input[type=date]:disabled,
+input[type=datetime-local]:disabled,
+textarea:disabled,
+input[list]:disabled {
+  box-shadow: none;
+  background-color: rgba(221.085, 221.085, 237.915, 0.5);
+}
+input[type=text]:disabled::placeholder,
+input[type=date]:disabled::placeholder,
+input[type=datetime-local]:disabled::placeholder,
+textarea:disabled::placeholder,
+input[list]:disabled::placeholder {
+  color: light-dark(hsl(240, 33%, 70%), white);
+}
+input[type=text]::-webkit-calendar-picker-indicator,
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=datetime-local]::-webkit-calendar-picker-indicator,
+textarea::-webkit-calendar-picker-indicator,
+input[list]::-webkit-calendar-picker-indicator {
+  color-scheme: dark;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  filter: invert(0.8);
+}
+
+input[type=color] {
+  all: unset;
+  width: 7.5rem;
+  height: 2rem;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+input[type=file] {
+  font-family: "Cabin", sans-serif;
+}
+
+input[type=file]::file-selector-button {
+  box-shadow: inset -1px -1px 0.25rem rgb(119.34, 119.34, 186.66), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(119.34, 119.34, 186.66);
+  transition: box-shadow 0.2s ease;
+}
+input[type=file]::file-selector-button:hover {
+  box-shadow: inset 4px 4px 4px rgb(119.34, 119.34, 186.66);
+  transition: box-shadow 0.2s ease;
+}
+input[type=file]::file-selector-button {
+  margin-inline-end: 1rem;
+}
+
+select {
+  box-shadow: inset -1px -1px 0.25rem rgb(119.34, 119.34, 186.66), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(119.34, 119.34, 186.66);
+  transition: box-shadow 0.2s ease;
+}
+select:hover {
+  box-shadow: inset 4px 4px 4px rgb(119.34, 119.34, 186.66);
+  transition: box-shadow 0.2s ease;
+}
+select {
+  cursor: pointer;
+  appearance: none;
+  /* Disable the default arrow */
+  -webkit-appearance: none;
+  /* For WebKit-based browsers */
+  -moz-appearance: none;
+  /* For Firefox */
+  background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+input[type=text],
+input[type=date],
+input[type=datetime-local],
+input[list],
+select {
+  width: 20ch;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.moonlight {
+  background-color: white;
+  color: hsl(240, 33%, 30%);
+}
+.moonlight blockquote {
+  color: hsl(240, 33%, 50%);
+  border-left: solid 1px hsl(240, 33%, 50%);
+}
+.moonlight a:visited {
+  color: hsl(240, 33%, 50%);
+}
+
+.midnight {
+  background-color: hsl(240, 33%, 50%);
   color: white;
 }
+.midnight blockquote {
+  color: hsl(330, 100%, 90%);
+  border-left: solid 1px hsl(330, 100%, 90%);
+}
+.midnight h1,
+.midnight h2,
+.midnight h3,
+.midnight h4,
+.midnight h5,
+.midnight h6,
+.midnight a {
+  color: hsl(60, 100%, 80%);
+}
+.midnight h1:visited,
+.midnight h2:visited,
+.midnight h3:visited,
+.midnight h4:visited,
+.midnight h5:visited,
+.midnight h6:visited,
+.midnight a:visited {
+  color: hsl(60, 100%, 80%);
+}
+
+.rainbow {
+  background-image: linear-gradient(130deg, hsl(330, 100%, 90%), hsl(60, 100%, 90%), hsl(180, 100%, 90%), hsl(210, 100%, 90%), hsl(240, 33%, 90%));
+  color: hsl(240, 33%, 30%);
+}
+.rainbow blockquote {
+  color: hsl(240, 33%, 50%);
+  border-left: solid 1px hsl(240, 33%, 50%);
+}
+.rainbow a {
+  color: hsl(240, 33%, 50%);
+}
+.rainbow a:visited {
+  color: hsl(240, 33%, 50%);
+}
+
+.twilight {
+  background-image: linear-gradient(130deg, hsl(210, 100%, 80%), hsl(240, 33%, 70%), hsl(240, 33%, 70%), hsl(210, 100%, 80%));
+  color: white;
+}
+.twilight blockquote {
+  color: hsl(330, 100%, 20%);
+  border-left: solid 1px hsl(330, 100%, 20%);
+}
+.twilight h1,
+.twilight h2,
+.twilight h3,
+.twilight h4,
+.twilight h5,
+.twilight h6 {
+  color: hsl(240, 33%, 20%);
+}
+.twilight a {
+  color: hsl(60, 100%, 70%);
+}
+.twilight a:visited {
+  color: hsl(60, 100%, 70%);
+}
+
+.sunrise {
+  background-image: linear-gradient(130deg, hsl(0, 100%, 90%), hsl(60, 100%, 90%));
+  color: hsl(240, 33%, 30%);
+}
+.sunrise blockquote {
+  color: hsl(240, 33%, 50%);
+  border-left: solid 1px hsl(240, 33%, 50%);
+}
+.sunrise a:visited {
+  color: hsl(240, 33%, 50%);
+}
+
+.success {
+  background-color: hsl(180, 100%, 80%);
+  color: hsl(240, 33%, 30%);
+}
+
+.info {
+  background-color: hsl(210, 100%, 90%);
+  color: hsl(240, 33%, 30%);
+}
+
+.error {
+  background-color: hsl(330, 100%, 80%);
+  color: hsl(240, 33%, 30%);
+}
+
+.warning {
+  background-color: hsl(60, 100%, 90%);
+  color: hsl(240, 33%, 30%);
+}
+
+/*# sourceMappingURL=index.css.map */

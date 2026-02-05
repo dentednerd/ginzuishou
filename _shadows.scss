@@ -1,0 +1,36 @@
+@use "sass:color";
+@use './colors';
+
+@mixin inset($color) {
+  box-shadow: inset 1px 1px 0.25rem $color;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: inset 4px 4px 4px $color;
+    transition: box-shadow 0.2s ease;
+  }
+}
+
+@mixin bevel($color) {
+  $mix: color.mix(colors.$purple-900, $color, $weight: 50%);
+  $shadow-color: color.adjust($mix, $lightness: -30%);
+  box-shadow: inset -1px -1px 0.25rem $shadow-color, inset 1px 1px 0.25rem white, 1px 1px 0.125rem $shadow-color;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: inset 4px 4px 4px $shadow-color;
+    transition: box-shadow 0.2s ease;
+  }
+}
+
+.shadow-drop {
+  box-shadow: 0.25rem 0.25rem 0.5rem colors.$text;
+}
+
+.shadow-inset {
+  @include inset(colors.$purple-300);
+}
+
+.shadow-bevel {
+  @include bevel(colors.$purple-300);
+}

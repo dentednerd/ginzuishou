@@ -1,0 +1,39 @@
+@use 'sass:color';
+@use './colors';
+@use './fonts';
+@use './shadows';
+
+button {
+  @include shadows.bevel(colors.$purple-900);
+  background-color: colors.$purple-900;
+  color: colors.$purple-300;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: fonts.$body;
+  font-size: 1rem;
+  line-height: normal;
+  cursor: pointer;
+
+  &.success {
+    @include shadows.bevel(colors.$success);
+  }
+
+  &.info {
+    @include shadows.bevel(colors.$info);
+  }
+
+  &.error {
+    @include shadows.bevel(colors.$error);
+  }
+
+  &.warning {
+    @include shadows.bevel(colors.$warning);
+  }
+
+  &:disabled {
+    color: colors.$purple-700;
+    box-shadow: unset;
+    cursor: auto;
+  }
+}

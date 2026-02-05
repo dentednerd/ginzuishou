@@ -1,0 +1,23 @@
+{
+  "name": "ginzuishou",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/dentednerd/ginzuishou#readme",
+  "bugs": {
+    "url": "https://github.com/dentednerd/ginzuishou/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dentednerd/ginzuishou.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch main.scss index.css"
+  },
+  "dependencies": {
+    "sass": "^1.97.3"
+  }
+}

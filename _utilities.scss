@@ -1,0 +1,119 @@
+@use './colors';
+@use './gradients';
+
+.moonlight {
+  background-color: white;
+  color: colors.$purple-300;
+
+  blockquote {
+    color: colors.$purple-500;
+    border-left: solid 1px colors.$purple-500;
+  }
+
+  a:visited {
+    color: colors.$purple-500;
+  }
+}
+
+.midnight {
+  background-color: colors.$purple-500;
+  color: white;
+
+  blockquote {
+    color: colors.$pink-900;
+    border-left: solid 1px colors.$pink-900;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a {
+    color: colors.$yellow-800;
+
+    &:visited {
+      color: colors.$yellow-800;
+    }
+  }
+}
+
+.rainbow {
+  background-image: gradients.$rainbow;
+  color: colors.$purple-300;
+
+  blockquote {
+    color: colors.$purple-500;
+    border-left: solid 1px colors.$purple-500;
+  }
+
+  a {
+    color: colors.$purple-500;
+
+    &:visited {
+      color: colors.$purple-500;
+    }
+  }
+}
+
+.twilight {
+  background-image: gradients.$twilight;
+  color: white;
+
+  blockquote {
+    color: colors.$pink-200;
+    border-left: solid 1px colors.$pink-200;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: colors.$purple-200;
+  }
+
+  a {
+    color: colors.$yellow-700;
+
+    &:visited {
+      color: colors.$yellow-700;
+    }
+  }
+}
+
+.sunrise {
+  background-image: gradients.$sunrise;
+  color: colors.$purple-300;
+
+  blockquote {
+    color: colors.$purple-500;
+    border-left: solid 1px colors.$purple-500;
+  }
+
+  a:visited {
+    color: colors.$purple-500;
+  }
+}
+
+.success {
+  background-color: colors.$success;
+  color: colors.$purple-300;
+}
+
+.info {
+  background-color: colors.$info;
+  color: colors.$purple-300;
+}
+
+.error {
+  background-color: colors.$error;
+  color: colors.$purple-300;
+}
+
+.warning {
+  background-color: colors.$warning;
+  color: colors.$purple-300;
+}
