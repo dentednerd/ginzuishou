@@ -73,6 +73,7 @@
   --text: light-dark(hsl(240, 33%, 30%), white);
   --link: hsl(210, 100%, 40%);
   --body-grid-bg: light-dark(hsl(240, 33%, 95%), hsl(240, 33%, 30%));
+  --body-grid-lines: light-dark(hsl(240, 33%, 90%), hsl(240, 33%, 40%));
   --body: Cabin, sans-serif;
   --heading: Philosopher, sans-serif;
   --code: Source Code Pro, monospace;
@@ -105,13 +106,22 @@ body {
   line-height: normal;
   color: light-dark(hsl(240, 33%, 30%), white);
   background-color: light-dark(hsl(240, 33%, 95%), hsl(240, 33%, 30%));
-  background-image: linear-gradient(to right, hsl(240, 33%, 90%) 1px, transparent 1px), linear-gradient(to bottom, hsl(240, 33%, 90%) 1px, transparent 1px);
   background-size: 2rem 2rem;
   background-attachment: fixed;
+  background-image: linear-gradient(to right, hsl(240, 33%, 90%) 1px, transparent 1px), linear-gradient(to bottom, hsl(240, 33%, 90%) 1px, transparent 1px);
   display: grid;
   place-items: center;
   min-block-size: 100vh;
   min-inline-size: 100vw;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: linear-gradient(to right, hsl(240, 33%, 40%) 1px, transparent 1px), linear-gradient(to bottom, hsl(240, 33%, 40%) 1px, transparent 1px);
+  }
+}
+[data-theme=dark] body {
+  background-image: linear-gradient(to right, hsl(240, 33%, 40%) 1px, transparent 1px), linear-gradient(to bottom, hsl(240, 33%, 40%) 1px, transparent 1px);
 }
 
 body[data-theme=dark] {
@@ -147,7 +157,7 @@ body[data-theme=dark] button[data-theme-toggle] .moon {
 }
 
 .shadow-drop {
-  box-shadow: 0.25rem 0.25rem 0.5rem light-dark(hsl(240, 33%, 30%), white);
+  box-shadow: 0.25rem 0.25rem 0.5rem light-dark(hsl(240, 33%, 40%), hsl(240, 33%, 70%));
 }
 
 .shadow-inset {

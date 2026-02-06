@@ -24,7 +24,7 @@
 }
 
 .shadow-drop {
-  box-shadow: 0.25rem 0.25rem 0.5rem colors.$text;
+  box-shadow: 0.25rem 0.25rem 0.5rem light-dark(colors.$purple-400, colors.$purple-700);
 }
 
 .shadow-inset {

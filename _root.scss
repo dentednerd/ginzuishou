@@ -76,6 +76,7 @@
   --text: #{colors.$text};
   --link: #{colors.$link};
   --body-grid-bg: #{colors.$body-grid-bg};
+  --body-grid-lines: #{colors.$body-grid-lines};
   --body: #{fonts.$body};
   --heading: #{fonts.$heading};
   --code: #{fonts.$code};
@@ -108,16 +109,31 @@ body {
   line-height: normal;
   color: colors.$text;
   background-color: colors.$body-grid-bg;
+  background-size: 2rem 2rem;
+  background-attachment: fixed;
   background-image:
     linear-gradient(to right, colors.$purple-900 1px, transparent 1px),
     linear-gradient(to bottom, colors.$purple-900 1px, transparent 1px);
-  background-size: 2rem 2rem;
-  background-attachment: fixed;
   display: grid;
   place-items: center;
   min-block-size: 100vh;
   min-inline-size: 100vw;
+}
 
+@media(prefers-color-scheme: dark) {
+  body {
+    background-image:
+      linear-gradient(to right, colors.$purple-400 1px, transparent 1px),
+      linear-gradient(to bottom, colors.$purple-400 1px, transparent 1px);
+  }
+}
+
+[data-theme="dark"] {
+  body {
+    background-image:
+      linear-gradient(to right, colors.$purple-400 1px, transparent 1px),
+      linear-gradient(to bottom, colors.$purple-400 1px, transparent 1px);
+  }
 }
 
 body[data-theme="dark"] {
