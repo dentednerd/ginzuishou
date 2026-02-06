@@ -240,7 +240,7 @@ div:is([popover]) {
   position: relative;
 }
 div:is([popover]):popover-open {
-  width: 30vw;
+  width: fit-content;
   height: fit-content;
   position: fixed;
   inset: unset;
@@ -248,7 +248,7 @@ div:is([popover]):popover-open {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  padding: 1lh 2lh 1lh 1lh;
+  padding: 3lh 2lh 1lh 1lh;
   border: none;
   border-radius: 1lh;
   overflow: auto;
@@ -406,6 +406,15 @@ textarea:hover,
 input[list]:hover {
   box-shadow: inset 4px 4px 4px hsl(240, 33%, 60%);
   transition: box-shadow 0.2s ease;
+}
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=password]::placeholder,
+input[type=date]::placeholder,
+input[type=datetime-local]::placeholder,
+textarea::placeholder,
+input[list]::placeholder {
+  color: hsl(240, 33%, 60%);
 }
 input[type=text]:disabled,
 input[type=email]:disabled,

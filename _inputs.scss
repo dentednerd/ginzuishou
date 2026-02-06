@@ -47,6 +47,10 @@ textarea,
 input[list] {
   @include shadows.inset(colors.$purple-600);
 
+  &::placeholder {
+    color: colors.$purple-600;
+  }
+
   &:disabled {
     box-shadow: none;
     background-color: color.mix(colors.$purple-900, transparent, $weight: 50%);
