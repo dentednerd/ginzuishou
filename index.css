@@ -108,6 +108,10 @@ body {
   background-image: linear-gradient(to right, hsl(240, 33%, 90%) 1px, transparent 1px), linear-gradient(to bottom, hsl(240, 33%, 90%) 1px, transparent 1px);
   background-size: 2rem 2rem;
   background-attachment: fixed;
+  display: grid;
+  place-items: center;
+  min-block-size: 100vh;
+  min-inline-size: 100vw;
 }
 
 body[data-theme=dark] {

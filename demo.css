@@ -7,6 +7,7 @@
 
 .demo {
   display: grid;
+  place-items: unset;
   grid-template-columns: 1fr;
   grid-template-rows: min-content auto;
   gap: 1rem;
