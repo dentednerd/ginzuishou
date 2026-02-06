@@ -388,6 +388,8 @@ datalist::placeholder {
 }
 
 input[type=text],
+input[type=email],
+input[type=password],
 input[type=date],
 input[type=datetime-local],
 textarea,
@@ -396,6 +398,8 @@ input[list] {
   transition: box-shadow 0.2s ease;
 }
 input[type=text]:hover,
+input[type=email]:hover,
+input[type=password]:hover,
 input[type=date]:hover,
 input[type=datetime-local]:hover,
 textarea:hover,
@@ -404,6 +408,8 @@ input[list]:hover {
   transition: box-shadow 0.2s ease;
 }
 input[type=text]:disabled,
+input[type=email]:disabled,
+input[type=password]:disabled,
 input[type=date]:disabled,
 input[type=datetime-local]:disabled,
 textarea:disabled,
@@ -412,6 +418,8 @@ input[list]:disabled {
   background-color: rgba(221.085, 221.085, 237.915, 0.5);
 }
 input[type=text]:disabled::placeholder,
+input[type=email]:disabled::placeholder,
+input[type=password]:disabled::placeholder,
 input[type=date]:disabled::placeholder,
 input[type=datetime-local]:disabled::placeholder,
 textarea:disabled::placeholder,
@@ -419,6 +427,8 @@ input[list]:disabled::placeholder {
   color: light-dark(hsl(240, 33%, 70%), white);
 }
 input[type=text]::-webkit-calendar-picker-indicator,
+input[type=email]::-webkit-calendar-picker-indicator,
+input[type=password]::-webkit-calendar-picker-indicator,
 input[type=date]::-webkit-calendar-picker-indicator,
 input[type=datetime-local]::-webkit-calendar-picker-indicator,
 textarea::-webkit-calendar-picker-indicator,
@@ -466,11 +476,8 @@ select:hover {
 select {
   cursor: pointer;
   appearance: none;
-  /* Disable the default arrow */
   -webkit-appearance: none;
-  /* For WebKit-based browsers */
   -moz-appearance: none;
-  /* For Firefox */
   background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/></svg>');
   background-repeat: no-repeat;
   background-position: right 1rem center;
@@ -478,18 +485,13 @@ select {
 }
 
 input[type=text],
+input[type=email],
+input[type=password],
 input[type=date],
 input[type=datetime-local],
 input[list],
 select {
   width: 20ch;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
 }
 
 .moonlight {
