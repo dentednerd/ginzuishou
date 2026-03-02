@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+/* BASE TOKENS */
+/* SEMANTIC TOKENS */
 :root {
   --pink-100: hsl(330, 100%, 10%);
   --pink-200: hsl(330, 100%, 20%);
@@ -66,7 +68,7 @@
   --cyan: hsl(180, 100%, 80%);
   --blue: hsl(210, 100%, 80%);
   --purple: hsl(240, 33%, 70%);
-  --success: hsl(180, 100%, 80%);
+  --success-bg: hsl(180, 100%, 80%);
   --info: hsl(210, 100%, 90%);
   --error: hsl(330, 100%, 80%);
   --warning: hsl(60, 100%, 90%);
@@ -317,35 +319,35 @@ button {
   line-height: normal;
   cursor: pointer;
 }
-button.success {
+button[data-variant=success] {
   box-shadow: inset -1px -1px 0.25rem rgb(51.1275, 204.1275, 229.3725), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(51.1275, 204.1275, 229.3725);
   transition: box-shadow 0.2s ease;
 }
-button.success:hover {
+button[data-variant=success]:hover {
   box-shadow: inset 4px 4px 4px rgb(51.1275, 204.1275, 229.3725);
   transition: box-shadow 0.2s ease;
 }
-button.info {
+button[data-variant=info] {
   box-shadow: inset -1px -1px 0.25rem rgb(85.17, 136.17, 220.83), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(85.17, 136.17, 220.83);
   transition: box-shadow 0.2s ease;
 }
-button.info:hover {
+button[data-variant=info]:hover {
   box-shadow: inset 4px 4px 4px rgb(85.17, 136.17, 220.83);
   transition: box-shadow 0.2s ease;
 }
-button.error {
+button[data-variant=error] {
   box-shadow: inset -1px -1px 0.25rem rgb(207.4884459459, 64.5965540541, 159.6196621622), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(207.4884459459, 64.5965540541, 159.6196621622);
   transition: box-shadow 0.2s ease;
 }
-button.error:hover {
+button[data-variant=error]:hover {
   box-shadow: inset 4px 4px 4px rgb(207.4884459459, 64.5965540541, 159.6196621622);
   transition: box-shadow 0.2s ease;
 }
-button.warning {
+button[data-variant=warning] {
   box-shadow: inset -1px -1px 0.25rem rgb(187.17, 187.17, 118.83), inset 1px 1px 0.25rem white, 1px 1px 0.125rem rgb(187.17, 187.17, 118.83);
   transition: box-shadow 0.2s ease;
 }
-button.warning:hover {
+button[data-variant=warning]:hover {
   box-shadow: inset 4px 4px 4px rgb(187.17, 187.17, 118.83);
   transition: box-shadow 0.2s ease;
 }
@@ -602,24 +604,24 @@ select {
   color: hsl(240, 33%, 50%);
 }
 
-.success {
+[data-variant=success] {
   background-color: hsl(180, 100%, 80%);
-  color: hsl(240, 33%, 30%);
+  color: hsl(180, 100%, 20%);
 }
 
-.info {
+[data-variant=info] {
   background-color: hsl(210, 100%, 90%);
-  color: hsl(240, 33%, 30%);
+  color: hsl(210, 100%, 20%);
 }
 
-.error {
+[data-variant=error] {
   background-color: hsl(330, 100%, 80%);
-  color: hsl(240, 33%, 30%);
+  color: hsl(330, 100%, 20%);
 }
 
-.warning {
+[data-variant=warning] {
   background-color: hsl(60, 100%, 90%);
-  color: hsl(240, 33%, 30%);
+  color: hsl(60, 100%, 20%);
 }
 
 /*# sourceMappingURL=index.css.map */

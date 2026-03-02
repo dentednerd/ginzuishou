@@ -1,0 +1,22 @@
+@use './colors';
+@use './gradients';
+
+[data-variant=success] {
+  background-color: colors.$success-bg;
+  color: colors.$success-fg;
+}
+
+[data-variant=info] {
+  background-color: colors.$info-bg;
+  color: colors.$info-fg;
+}
+
+[data-variant=error] {
+  background-color: colors.$error-bg;
+  color: colors.$error-fg;
+}
+
+[data-variant=warning] {
+  background-color: colors.$warning-bg;
+  color: colors.$warning-fg;
+}

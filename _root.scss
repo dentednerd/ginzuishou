@@ -69,10 +69,10 @@
   --cyan: #{colors.$cyan};
   --blue: #{colors.$blue};
   --purple: #{colors.$purple};
-  --success: #{colors.$success};
-  --info: #{colors.$info};
-  --error: #{colors.$error};
-  --warning: #{colors.$warning};
+  --success-bg: #{colors.$success-bg};
+  --info: #{colors.$info-bg};
+  --error: #{colors.$error-bg};
+  --warning: #{colors.$warning-bg};
   --text: #{colors.$text};
   --link: #{colors.$link};
   --body-grid-bg: #{colors.$body-grid-bg};

@@ -15,20 +15,20 @@ button {
   line-height: normal;
   cursor: pointer;
 
-  &.success {
-    @include shadows.bevel(colors.$success);
+  &[data-variant=success] {
+    @include shadows.bevel(colors.$success-bg);
   }
 
-  &.info {
-    @include shadows.bevel(colors.$info);
+  &[data-variant=info] {
+    @include shadows.bevel(colors.$info-bg);
   }
 
-  &.error {
-    @include shadows.bevel(colors.$error);
+  &[data-variant=error] {
+    @include shadows.bevel(colors.$error-bg);
   }
 
-  &.warning {
-    @include shadows.bevel(colors.$warning);
+  &[data-variant=warning] {
+    @include shadows.bevel(colors.$warning-bg);
   }
 
   &:disabled {

@@ -33,6 +33,9 @@
         <li role="presentation">
           <a id="tab-3" href="#panel-3" role="tab">Utility Classes</a>
         </li>
+        <li role="presentation">
+          <a id="tab-4" href="#panel-4" role="tab">Variants</a>
+        </li>
       </ul>
     </section>
 
@@ -102,17 +105,17 @@
             <button type="button" popovertarget="popover">
               button
             </button>
-            <button type="button" class="success" popovertarget="popover">
-              .success
+            <button type="button" data-variant="success" popovertarget="popover">
+              success
             </button>
-            <button type="button" class="info" popovertarget="popover">
-              .info
+            <button type="button" data-variant="info" popovertarget="popover">
+              info
             </button>
-            <button type="button" class="error" popovertarget="popover">
-              .error
+            <button type="button" data-variant="error" popovertarget="popover">
+              error
             </button>
-            <button type="button" class="warning" popovertarget="popover">
-              .warning
+            <button type="button" data-variant="warning" popovertarget="popover">
+              warning
             </button>
             <button type="button" disabled>
               disabled
@@ -123,20 +126,6 @@
 
       <article id="panel-3" aria-labelledby="tab-3">
         <section class="utilities">
-          <section class="row">
-            <div class="success">
-              <p>.success</p>
-            </div>
-            <div class="info">
-              <p>.info</p>
-            </div>
-            <div class="error">
-              <p>.error</p>
-            </div>
-            <div class="warning">
-              <p>.warning</p>
-            </div>
-          </section>
           <div class="moonlight">
             <h3>.moonlight</h3>
             <p>It's hard to see things when you're too close. <a href="https://www.bobrosslipsum.com/">Take a step back and
@@ -179,6 +168,26 @@
           </div>
         </section>
       </article>
+
+      <article id="panel-4" aria-labelledby="tab-4">
+        <section class="utilities">
+          <section class="row">
+            <div role="alert" data-variant="success">
+              <p>data-variant="success"</p>
+            </div>
+            <div role="alert" data-variant="info">
+              <p>data-variant="info"</p>
+            </div>
+            <div role="alert" data-variant="error">
+              <p>data-variant="error"</p>
+            </div>
+            <div role="alert" data-variant="warning">
+              <p>data-variant="warning"</p>
+            </div>
+          </section>
+        </section>
+      </article>
+
     </section>
   </section>
   <div id="popover" class="moonlight" popover>
