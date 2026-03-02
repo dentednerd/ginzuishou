@@ -20,7 +20,17 @@
   </button>
   <header>
     <h1>ginzuishou</h1>
+    <details name="group-1">
+      <summary>What's all this then?</summary>
+      <p>This is a visual theme for my Codepen projects, built in Sass.</p>
+    </details>
+    <details name="group-1">
+      <summary>What does "ginzuishou" mean?</summary>
+      <p>It's a Japanese word meaning "silver crystal". It's a hint to the inspiration behind the colours of this theme. If
+        you know, you know.</p>
+    </details>
   </header>
+
   <section class="tabs-component">
     <section class="tabs-container">
       <ul role="tablist">
@@ -52,14 +62,14 @@
         </blockquote>
         <code>const code = this;</code>
         <ul>
-          <li>One.</li>
-          <li>Two.</li>
-          <li>Three.</li>
+          <li>Unordered list item one.</li>
+          <li>Unordered list item two.</li>
+          <li>Unordered list item three.</li>
         </ul>
         <ol>
-          <li>One.</li>
-          <li>Two.</li>
-          <li>Three.</li>
+          <li>Ordered list item one.</li>
+          <li>Ordered list item two.</li>
+          <li>Ordered list item three.</li>
         </ol>
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
@@ -67,6 +77,21 @@
         <h4>Heading 4</h4>
         <h5>Heading 5</h5>
         <h6>Heading 6</h6>
+
+        <details name="accordion-demo">
+          <summary>Wait, is this an accordion? In native HTML?</summary>
+          <p>Yes! It's a group of <code>details</code> elements, with border radii applied to the first and last elements
+            in the group.</p>
+        </details>
+        <details name="accordion-demo">
+          <summary>Can each accordion item be styled individually?</summary>
+          <p class="moonlight">Sure can.</p>
+        </details>
+        <details name="accordion-demo">
+          <summary>How do you get the other accordion items to close when another one opens?</summary>
+          <p>Add a <code>name</code> attribute to each of the <code>details</code> elements in the group. Make sure the value of <code>name</code> matches across all accordion items. </p>
+        </details>
+
       </article>
 
       <article id="panel-2" aria-labelledby="tab-2">
@@ -117,6 +142,12 @@
             <button type="button" data-variant="warning" popovertarget="popover">
               warning
             </button>
+                        <button type="button" data-variant="outline" popovertarget="popover">
+                          outline
+                        </button>
+                                    <button type="button" data-variant="ghost" popovertarget="popover">
+                                      ghost
+                                    </button>
             <button type="button" disabled>
               disabled
             </button>

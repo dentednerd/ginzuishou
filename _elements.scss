@@ -1,0 +1,56 @@
+@use './colors';
+@use './fonts';
+
+details {
+  background-color: colors.$purple-800;
+  color: colors.$purple-200;
+  padding: 1rem;
+  border-radius: 0;
+
+  &:first-of-type,
+  &:has(~ *:not(details)),
+  &~*:not(details) + details {
+    border-start-start-radius: 1rem;
+    border-start-end-radius: 1rem;
+  }
+
+  &+details {
+    border-radius: 0;
+  }
+
+  &:last-of-type,
+  &:has(+ *:not(details)) {
+    border-end-start-radius: 1rem;
+    border-end-end-radius: 1rem;
+  }
+
+  &:open {
+    summary {
+      margin-block-end: 1rem;
+    }
+  }
+
+  &:has(+ details:open) {
+    summary {
+      opacity: 0.75;
+    }
+  }
+
+  summary {
+    font-family: fonts.$heading;
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &:has(summary:focus) {
+    outline: solid 2px colors.$text;
+  }
+}

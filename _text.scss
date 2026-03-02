@@ -19,7 +19,7 @@ li {
 p {
   margin-block-end: 1lh;
 
-  &:last-of-type {
+  &:last-child {
     margin-block-end: 0;
   }
 }
